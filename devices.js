@@ -84,7 +84,7 @@ function sendRequest(paginationOffset, csv, cb) {
     res.setEncoding('utf8');
 
     console.info('# \x1b[32mREQUEST QUERY\x1b[0m:', monitor_devices_options.path);
-    console.log("# \x1b[32mREQUEST HEADERS\x1b[0m:" + JSON.stringify(monitor_devices_options.headers));
+    console.info("# \x1b[32mREQUEST HEADERS\x1b[0m:" + JSON.stringify(monitor_devices_options.headers));
     console.info('# \x1b[32mREQUEST STATUS\x1b[0m:', result.result.status);
 
     // Store HTTP Response data
@@ -146,7 +146,6 @@ function parseDevices(paginationOffset, result, csv, cb) {
             if (locationIndex != deviceValue.length - 1) value += "|"
           }
         } else if (deviceValue != undefined && value != "null") value = deviceValue;
-
 
         csv.outputString += value;
         
