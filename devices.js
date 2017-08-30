@@ -172,18 +172,19 @@ function getDevices(paginationOffsetParam, csvParam) {
     if (csv.devicesCount < pagination.totalCount) getDevices(paginationOffset + 1, csv)
     else {
       // Generate the line with the CSV fields names
-      console.log("");
-      console.log('# Start of Output\r\n');
+      console.log("#Required fields and fields order for CSV import to HMNG:");
+      console.log('# Start of Output');
+      console.log("#{Serial Number},{Host Name},{Device Model},{Device Function},{Network Policy},{Location},{Static IP Address},{Netmask},{Default Gateway},{Country Code},{Wifi0 Radio Profile},{Wifi0 Operation Mode},{Wifi0 Channel},{Wifi0 Power},{Wifi1 Radio Profile},{Wifi1 Operation Mode},{Wifi1 Channel},{Wifi1 Power},{HiveOS},{Supplemental CLI Name}");      
       let fieldsString = "#";
       for (let fieldIndex in csvFields) {
         fieldsString += csvFields[fieldIndex];
-        if (fieldIndex != csvFields.length - 1) fieldsString += ",";        
+        if (fieldIndex != csvFields.length - 1) fieldsString += ",";
       }
       console.log(fieldsString);
       console.log(csv.outputString);
       console.log('#Total # of Devices: ' + csv.devicesCount);
       console.log('#Total # of Real Devices: ' + csv.realDevicesCount);
-      console.log('#End of Output\n');
+      console.log('#End of Output');
       console.error('\x1b[32mSUCCESS\x1b[0m: The process ended without error.')
     }
   })
