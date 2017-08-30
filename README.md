@@ -7,6 +7,8 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 # USAGE
+ **WARNING:** If you are editing the CSV file with Excel, be sure to still have the 14 digits in all the serial number!
+
 This script requires to have NodeJS installed. You can download it from the [NodeJS web site](https://nodejs.org/). 
 Please note that only the LTS version was tested.
 
@@ -30,7 +32,7 @@ To run the script, you'll need to :
 ```
 # PARAMETERS
 ## ACS Parameters
-```
+```javascript
 var clientId = "xxxxxx";
 var clientSecret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 var redirectUrl = "https://127.0.0.1";
@@ -45,7 +47,7 @@ You don't need a developer account, and you can just use, for example:
   
 
 ## HiveManager NG Parameters
-```
+```javascript
 var serverFQDN = "cloud-ie.aerohive.com";
 var accessToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 var ownerId = "xxxxxx";
@@ -61,7 +63,7 @@ var ownerId = "xxxxxx";
 * ownerId: You can find the ownerId in the "About" section of your HiveManager NG account.
 
 ## CSV Parameters
-```
+```javascript
 var csvFields = ["serialId", "hostName", "model", "policy", "locations", "ip", "subnetMask", "defaultGateway", "osVersion"];
 ```
 This parameter will let you choose which fields will be saved in the CSV file.
