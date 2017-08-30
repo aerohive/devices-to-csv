@@ -83,9 +83,9 @@ function sendRequest(paginationOffset, csv, cb) {
     result.result.headers = JSON.stringify(res.headers);
     res.setEncoding('utf8');
 
-    console.info('# \x1b[32mREQUEST QUERY\x1b[0m:', monitor_devices_options.path);
-    console.info("# \x1b[32mREQUEST HEADERS\x1b[0m:" + JSON.stringify(monitor_devices_options.headers));
-    console.info('# \x1b[32mREQUEST STATUS\x1b[0m:', result.result.status);
+    console.error('\x1b[32mREQUEST QUERY\x1b[0m:', monitor_devices_options.path);
+    console.error("\x1b[32mREQUEST HEADERS\x1b[0m:" + JSON.stringify(monitor_devices_options.headers));
+    console.error('\x1b[32mREQUEST STATUS\x1b[0m:', result.result.status);
 
     // Store HTTP Response data
     res.on("data", function (chunk) {
@@ -96,8 +96,8 @@ function sendRequest(paginationOffset, csv, cb) {
     res.on("end", function () {
       // Parse HTTP Response data if any
       if (data != '') {
-        if (data.length > 400) console.info("# \x1b[34mRESPONSE DATA\x1b[0m:", data.substr(0, 400) + '...');
-        else console.info("# \x1b[32mRESPONSE DATA\x1b[0m:", data);
+        if (data.length > 400) console.error("\x1b[34mRESPONSE DATA\x1b[0m:", data.substr(0, 400) + '...');
+        else console.error("\x1b[32mRESPONSE DATA\x1b[0m:", data);
         
         var dataJson = JSON.parse(data);
         result.data = dataJson.data;
@@ -118,7 +118,7 @@ function sendRequest(paginationOffset, csv, cb) {
           else error.message = result.error;
           if (result.error && result.error.code) error.code = result.error.code;
           else error.code = "";
-          console.error("# \x1b[31mRESPONSE ERROR\x1b[0m:", JSON.stringify(error));
+          console.error("\x1b[31mRESPONSE ERROR\x1b[0m:", JSON.stringify(error));
           break;
       }
     });
@@ -184,6 +184,7 @@ function getDevices(paginationOffsetParam, csvParam) {
       console.log('#Total # of Devices: ' + csv.devicesCount);
       console.log('#Total # of Real Devices: ' + csv.realDevicesCount);
       console.log('#End of Output\n');
+      console.error('\x1b[32mSUCCESS\x1b[0m: The process ended without error.')
     }
   })
 }
