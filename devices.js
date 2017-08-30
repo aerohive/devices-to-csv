@@ -142,8 +142,10 @@ function parseDevices(paginationOffset, result, csv, cb) {
         // if the current field is "locations", reformat the value with the "CSV import" format
         if (csvFields[fieldIndex] == "locations") {
           for (let locationIndex in deviceValue) {
-            value += deviceValue[locationIndex];
-            if (locationIndex != deviceValue.length - 1) value += "|"
+            if (locationIndex != 0) {
+              value += deviceValue[locationIndex];
+              if (locationIndex != deviceValue.length - 1) value += "|"
+            }
           }
         } else if (deviceValue != undefined && value != "null") value = deviceValue;
 
