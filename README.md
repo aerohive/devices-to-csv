@@ -22,9 +22,9 @@ To run the script, you'll need to :
 # Start of Output
 
 #serialId,hostName,model,policy,locations,ip,subnetMask,defaultGateway,osVersion
-22081234567890,SR2208P-Mesh,SR_2208P,,My-Location|My-Building|Floor+2,172.16.227.42,255.255.255.0,,1.0.1.22
-02501234567890,AP250-Portal,AP_250,,My-Location|My-Building|Floor+2,172.16.227.17,255.255.255.0,172.16.227.1,8.0.1.0
-01301234567890,AP130-Mesh,AP_130,,My-Location|My-Building|Floor+2,172.16.227.23,255.255.255.0,172.16.227.1,8.0.1.0
+22081234567890,SR2208P-Mesh,SR_2208P,,My-Building|Floor+2,172.16.227.42,255.255.255.0,,1.0.1.22
+02501234567890,AP250-Portal,AP_250,,My-Building|Floor+2,172.16.227.17,255.255.255.0,172.16.227.1,8.0.1.0
+01301234567890,AP130-Mesh,AP_130,,My-Building|Floor+2,172.16.227.23,255.255.255.0,172.16.227.1,8.0.1.0
 
 #Total # of Devices: 4
 #Total # of Real Devices: 4
