@@ -56,11 +56,11 @@ var ownerId = "xxxxxx";
 ### IF YOU ARE USING NG CLOUD
 * serverFQDN: it's something like cloud-xxx.aerohive.com, where xxx can be "va", "va2", "ie" or "aus" (this list may change). You can find it in the "About" section of your HiveManager NG account.
 * accessToken: In your HiveManagerNG account, go to "Global Settings > API Token Management" and create your token. **Be sure to generate the access token by using the same clientID as the one configured above!**.
-* ownerId: You can find the ownerId in the "About" section of your HiveManager NG account.
+* ownerId: The ownerId is the "VHM Id" value in the "About" section of your HiveManager NG account.
 ### IF YOU ARE USING NG-VA
 * serverFQDN: it is the FADN of your HiveManager NG Virtual Appliance.
 * accessToken: In your HiveManagerNG account, go to "Global Settings > API Token Management" and create your token. **Be sure to generate the access token by using the same clientID as the one configured above!**.
-* ownerId: You can find the ownerId in the "About" section of your HiveManager NG account.
+* ownerId: The ownerId is the "VHM Id" value in the "About" section of your HiveManager NG account.
 
 ## CSV Parameters
 ```javascript

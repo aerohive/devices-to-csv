@@ -29,7 +29,7 @@ var redirectUrl = "https://127.0.0.1";
 var serverFQDN = "cloud-ie.aerohive.com";
 //In NG, go to "Global Settings > API Token Management" and create your token
 var accessToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-//You can find the ownerId in the "About" menu from NG interface
+//The ownerId is the "VHM Id" value in the "About" menu from NG interface
 var ownerId = "xxxxxx";
 
 
