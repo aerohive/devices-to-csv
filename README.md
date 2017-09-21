@@ -21,10 +21,10 @@ To run the script, you'll need to :
 ```
 # Start of Output
 
-#serialId,hostName,model,policy,locations,ip,subnetMask,defaultGateway,osVersion
-22081234567890,SR2208P-Mesh,SR_2208P,,My-Building|Floor+2,172.16.227.42,255.255.255.0,,1.0.1.22
-02501234567890,AP250-Portal,AP_250,,My-Building|Floor+2,172.16.227.17,255.255.255.0,172.16.227.1,8.0.1.0
-01301234567890,AP130-Mesh,AP_130,,My-Building|Floor+2,172.16.227.23,255.255.255.0,172.16.227.1,8.0.1.0
+#serialId,hostName,model,locations,ip,subnetMask,defaultGateway,osVersion
+22081234567890,SR2208P-Mesh,SR_2208P,My-Building|Floor+2,172.16.227.42,255.255.255.0,,1.0.1.22
+02501234567890,AP250-Portal,AP_250,My-Building|Floor+2,172.16.227.17,255.255.255.0,172.16.227.1,8.0.1.0
+01301234567890,AP130-Mesh,AP_130,My-Building|Floor+2,172.16.227.23,255.255.255.0,172.16.227.1,8.0.1.0
 
 #Total # of Devices: 4
 #Total # of Real Devices: 4
@@ -64,36 +64,27 @@ var ownerId = "xxxxxx";
 
 ## CSV Parameters
 ```javascript
-var csvFields = ["serialId", "hostName", "model", "policy", "locations", "ip", "subnetMask", "defaultGateway", "osVersion"];
+var csvFields = ["serialId", "hostName", "model", "locations", "ip", "subnetMask", "defaultGateway", "osVersion"];
 ```
 This parameter will let you choose which fields will be saved in the CSV file.
 ### available fields: 
-* activeClients
-* alarmEvents
-* configType
-* connected
-* cpuUsage
-* defaultGateway
 * deviceId
-* deviceTemplate
-* dns
-* hostName
-* ip
-* lastUpdated
-* latitude
-* locationId
-* locations
-* longitude
-* macAddress
-* memUsage
-* mgmtStatus
-* mode
-* model
-* ntp
-* osVersion
 * ownerId
-* policy
+* macAddress
+* connected
+* hostName
 * serialId
-* simulatedDevice
+* model
+* ip
+* mode
+* osVersion
+* lastUpdated
+* mgmtStatus 
 * subnetMask
-* upTime
+* defaultGateway
+* dns
+* simType
+* unAssociatedClientsCount
+* presenceOn
+* activeClients
+* locations
