@@ -36,11 +36,10 @@ var ownerId = "xxxxxx";
 // #################### CSV parameters #################
 /*
  available fields: 
- activeClients, alarmEvents, configType, connected, cpuUsage, defaultGateway, deviceId, deviceTemplate, 
- dns, hostName, ip, lastUpdated, latitude, locationId, locations, longitude, macAddress, memUsage, mgmtStatus, 
- mode, model, ntp, osVersion, ownerId, policy, serialId, simulatedDevice, subnetMask, upTime
+  deviceId, ownerId, macAddress, connected, hostName, serialId, model, ip, mode, osVersion, lastUpdated, mgmtStatus, 
+  subnetMask, defaultGateway, dns, simType, unAssociatedClientsCount, presenceOn, activeClients, locations
  */
-var csvFields = ["serialId", "hostName", "model", "policy", "locations", "ip", "subnetMask", "defaultGateway", "osVersion"];
+var csvFields = ["serialId", "hostName", "model", "locations", "ip", "subnetMask", "defaultGateway", "osVersion"];
 
 
 
